@@ -221,31 +221,10 @@ export default function Contact() {
                     </div>
                     
                     <div id="submit" class="wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.4s">
-                        <button type="submit" id="contact-submit" class="btn btn-default btn-send hvr-bounce-to-right" value="Send Message">Envoyer</button>
+                        <button type="submit" id="contact-send" class="btn btn-default btn-send hvr-bounce-to-right" value="Send Message">Envoyer</button>
                     </div>                      
                 </form>
         </div>
-        </div>
-        <div class="row address-details">
-            
-            <div class="col-lg-3 col-sm-6">
-                <div class="address wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".5s">
-                    <i class="ion-ios-location-outline"></i>
-                    <h5>Sénégal, Dakar <br/>Ouakam en face MonPrix</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="email wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s">
-                    <i class="ion-ios-email-outline"></i>
-                    <p>contact@hellocenter.org<br/>contact@hellocenter.org</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="phone wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".9s">
-                    <i class="ion-ios-telephone-outline"></i>
-                    <p>+221 33 848 10 18<br/>+221 77 870 61 24</p>
-                </div>
-            </div>
         </div>
     </div>
 </section>  

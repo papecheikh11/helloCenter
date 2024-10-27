@@ -522,6 +522,11 @@ figure .buttons a:hover {
   background: #02bdd5;
   border-color: #02bdd5;
 }
+#contact-send{
+  background: #02bdd5;
+  border-color: #02bdd5;
+  color: white;
+}
 
 figure .buttons a:focus {
   text-decoration: none;

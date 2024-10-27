@@ -15,7 +15,7 @@ export default function Accueil() {
         ==================================================
         Slider Section Start
         ================================================== --> */}
-        <section id="hero-area" >
+        <section id="hero-area">
         <div className="container">
             <div className="row">
                 <div className="col-md-12 text-center">
@@ -35,7 +35,7 @@ export default function Accueil() {
                             <h2 className="wow fadeInUp animated" data-wow-delay=".6s" >
                                 «HELLO CENTER» est un centre d’appel qui exerce son activité en termes d’émission et de réception d’appel, particulièrement sur de la Prise de Rendez-vous, de la vente, de l’enquête, de service après-vente, de la Formation en Ligne ou en présentielle 
                             </h2>
-                            <a class="btn-lines dark light wow fadeInUp animated btn btn-default btn-green hvr-bounce-to-right" data-wow-delay=".9s" href="about.html" target="_blank">En Savoir Plus</a>
+                            <a class="btn-lines dark light wow fadeInUp animated btn btn-default btn-green hvr-bounce-to-right" data-wow-delay=".9s" href="/Apropos" target="_blank">En Savoir Plus</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ export default function Accueil() {
         <section id="about">
             <div className="container">
                 <div className="row d-flex justify-content-center align-items-center">
-                    <div className="col-md-6 col-sm-6">
+                    <div className="col-12 col-md-6">
                         <div className="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
                             <h1 className='d-flex flex-column'>
                                 <span>Pourquoi</span>
@@ -66,7 +66,7 @@ export default function Accueil() {
                         </div>
                         
                     </div>
-                    <div className="col-md-6 col-sm-6">
+                    <div className="col-12 col-md-6">
                         <div className="d-flex justify-content-center align-items-center block wow fadeInRight" data-wow-delay=".3s" data-wow-duration="500ms">
                             <img src={require('../imagesHelloCenter/mediatmpIMG_6629.jpg')} alt=""/>
                         </div>
@@ -91,7 +91,7 @@ export default function Accueil() {
 
         {/* Portfolio Section Start */}
 
-        <section id="feature">
+        <section id="services">
             <div class="container">
                 <div className="section-heading" style={{textAlign: "center"}}>
                     <h1 class="title wow fadeInDown" data-wow-delay=".3s">Ce que nous pouvons faire pour vous !</h1>
@@ -164,12 +164,12 @@ export default function Accueil() {
                                 
                             </div>
                         
-                            <div class="col-md-12 text-center">
+                            {/* <div class="col-md-12 text-center">
                                 <div class="block wow fadeInUp" data-wow-delay=".3s">
-                                            <a class="btn-lines dark light wow fadeInUp animated btn btn-default btn-green hvr-bounce-to-right" data-wow-delay=".9s" href="service.html" target="_blank">En Savoir Plus
-                                            </a> <a href="service.html"><span class="iconify" data-icon="ion:arrow-forward-circle-sharp" style={{color: "#00a4ba"}} data-width="50" data-height="50"></span></a>
+                                            <a class="btn-lines dark light wow fadeInUp animated btn btn-default btn-green hvr-bounce-to-right" data-wow-delay=".9s" href="/#services" target="_blank">En Savoir Plus
+                                            </a> <a href="/#services"><span class="iconify" data-icon="ion:arrow-forward-circle-sharp" style={{color: "#00a4ba"}} data-width="50" data-height="50"></span></a>
                                 </div>
-                            </div>
+                            </div> */}
                     
                             <div class="col-sm-6 col-lg-4">
                                 <div class="media wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="1800ms">

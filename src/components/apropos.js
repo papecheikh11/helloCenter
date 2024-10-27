@@ -7,7 +7,7 @@ export default function Apropos() {
   return (
     <div>
         {/* Global Page Section Start */}
-        <section class="global-page-header">
+        {/* <section class="global-page-header">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -26,16 +26,16 @@ export default function Apropos() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> */}
 
         {/* Company Description Section Start */}
-        <section class="company-description">
-            <div class="container">
+        <section class="company-description pt-5">
+            <div class="container pt-5">
                 <div class="row">
-                    <div class="col-md-6 wow fadeInLeft" data-wow-delay=".3s" >
+                    <div class="col-md-6 wow fadeInLeft order-2 order-md-1" data-wow-delay=".3s" >
                         <img src={require("../imagesHelloCenter/image00020.jpg")} alt="" class="img-fluid" />
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 order-1 order-md-2">
                         <div class="block">
                             <h3 class="subtitle wow fadeInUp" data-wow-delay=".3s" data-wow-duration="500ms">POURQUOI NOUS SOMMES DIFFÉRENTS</h3>
                             <p  class="wow fadeInUp" data-wow-delay=".5s" data-wow-duration="500ms" style={{ textAlign: "justify", textJustify: "inter-word"}}>
@@ -109,7 +109,19 @@ export default function Apropos() {
                     <div class="col-lg-12">
                         <h2 class="subtitle text-center">Rencontrer l'équipe</h2>
                     </div>
-                    <div class="col-md-3 col-sm-6">
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <img src={require("../imagesHelloCenter/equipe1.jpg")} class="img-fluid" />
+                            <h3 class="team_name mt-3">Brelotte FALL</h3>
+                            <p class="team_designation">Fondateur & Directeur Général</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src={require("../imagesHelloCenter/equipe2.jpg")} class="img-fluid" />
+                            <h3 class="team_name mt-3">Johnson FALL</h3>
+                            <p class="team_designation">Fondateur & Responsable Projet</p>
+                    </div>
+                    {/* <div class="col-md-3 col-sm-6">
                         <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".3s">
                             <div class="team-img">
                                 <img src="images/team/team-1.jpg" class="team-pic" alt="" />
@@ -175,7 +187,7 @@ export default function Apropos() {
                             
                         </div>
                     </div>
-                <div class="col-md-3 col-sm-6">
+                    <div class="col-md-3 col-sm-6">
                         <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay=".7s">
                             <div class="team-img">
                                 <img src="images/team/team-7.png" class="team-pic" alt="" />
@@ -198,7 +210,7 @@ export default function Apropos() {
                             <p class="team_designation">Responsable Production</p>
                             <p class="team_text" style={{textAlign:"justify", textJustify:"inter-word"}}>Difficile de résumer les raisons pour lesquelles je suis heureux d'avoir choisi Hello Center, l'importance donnée au contact humain et au bonheur au travail, le développement personnel et professionnel, le transfert de connaissances en interne et la force d'une entité qui a su conservé ses valeurs</p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

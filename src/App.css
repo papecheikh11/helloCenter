@@ -118,11 +118,9 @@ a:hover {
 }
 
 .global-page-header {
-  background-attachment: fixed;
-  background-size: cover;
-  padding: 120px 0 25px 0;
+  padding: 140px 0 25px 0;
   position: relative;
-  background: #02bdd5;
+  /* background: #02bdd5; */
   color: #fff;
 }
 
@@ -224,10 +222,12 @@ a:hover {
   background: url("imagesHelloCenter/banniere.jpg") no-repeat 50%;
   background-size: cover;
   background-attachment: fixed;
-  padding: 188px 0 80px 0;
+  /* padding: 188px 0 80px 0; */
+  padding-top: 230px;
   color: #fff;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   position: relative;
+  height: 650px;
 }
 
 #hero-area:before {
@@ -285,7 +285,7 @@ a:hover {
 }
 
 #call-to-action {
-  background: #02bdd5;
+  background: url("imagesHelloCenter/bannieres.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   padding: 80px 0;
@@ -539,6 +539,7 @@ figure figcaption h4 {
 
 figure figcaption h4 a {
   color: #02bdd5;
+  text-align:center;
 }
 
 figure figcaption p {

@@ -1,89 +1,127 @@
-import React, {useState} from 'react'
+
+import React, {useRef} from 'react'
 import '../App.css';
 import Info from './Info'
 import { TbBrandMyOppo } from "react-icons/tb";
 import { PiStudent } from "react-icons/pi";
+import emailjs from 'emailjs-com';
 
 export default function Contact() {
-    const [formData, setFormData] = useState({
-        nom: "",
-        email: "",
-        sujet: "",
-        message: ""
-    })
+    // const [formData, setFormData] = useState({
+    //     nom: "",
+    //     email: "",
+    //     sujet: "",
+    //     message: ""
+    // })
     
-    const handleChange = (e) => {
-        setFormData({...formData, [e.target.name]: e.target.value})
-    }
+    // const handleChange = (e) => {
+    //     setFormData({...formData, [e.target.name]: e.target.value})
+    // }
 
-    const handleSubmit = async (e) => {
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     try {
+    //     const response = await fetch('http://localhost:4000/messages/send', {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: JSON.stringify(formData)
+    //     });
+    //     console.log({ response })
+
+    //     if (response.ok) {
+    //         console.log('Message envoyé avec succès !');
+    //     } else {
+    //         console.log('Erreur lors de l\'envoi du message.');
+    //     }
+    // } catch (error) {
+    //     console.log('Une erreur est survenue lors de l\'envoi du message.');
+    // }
+    // }
+
+    const form = useRef();
+    const sendEmail = (e) => {
         e.preventDefault();
-        try {
-        const response = await fetch('http://localhost:4000/messages/send', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData)
-        });
-        console.log({ response })
+        emailjs.sendForm('service_26fdpl8', 'template_tgwix9p', form.current, 'W3q1bh_ZdO7lF3VBC')
+            .then((result) => { console.log(result.text); alert('Message envoyé avec succès !');
 
-        if (response.ok) {
-            console.log('Message envoyé avec succès !');
-        } else {
-            console.log('Erreur lors de l\'envoi du message.');
-        }
-    } catch (error) {
-        console.log('Une erreur est survenue lors de l\'envoi du message.');
-    }
+            },
+                (error) => { console.log(error.text); alert('Erreur lors de l\'envoi du message.');
+            });
     }
 
+    
+    const sendEmailCandidature = (e) => {
+        e.preventDefault();
+        
+        const formData = new FormData(form.current);
+        const fileInput = formData.get('file');
+    
+        // Si vous utilisez un service de stockage, téléchargez le fichier ici et obtenez le lien
+        const fileDownloadLink = "URL_DU_FICHIER_EN_LIGNE";
+    
+        const emailData = {
+            name: formData.get('name'),
+            lastName: formData.get('lastName'),
+            email: formData.get('email'),
+            tel: formData.get('tel'),
+            select: formData.get('select'),
+            message: formData.get('message'),
+            attachmentLink: fileDownloadLink, // Lien vers le fichier
+            attachmentName: fileInput.name // Nom du fichier pour l'affichage
+        };
+    
+        emailjs.send('service_26fdpl8', 'template_5dkmzmf', emailData, 'W3q1bh_ZdO7lF3VBC')
+            .then((result) => {
+                console.log(result.text);
+                alert('Message envoyé avec succès !');
+            })
+            .catch((error) => {
+                console.error('Une erreur est survenue : ', error);
+                alert('Erreur lors de l\'envoi du message : ' + error.text);
+            });
+    };
+    
+    
+    
+    
   return (
     <div>
     {/* Global Page Section Start */}
-        <section class="global-page-header">
+        {/* <section class="global-page-header">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="block">
-                            <h2>Contact</h2>
-                            <ol class="breadcrumb list-inline text-center">
-                                <li class="list-inline-item">
-                                    <a href="index.html">
-                                        <i class="ion-ios-home"></i>
-                                        Accueil &nbsp; &nbsp;/
-                                    </a>
-                                </li>
-                                <li class="active list-inline-item">Contact</li>
-                            </ol>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> */}
 
         {/* Contact Section Start */}
 <section id="contact-section">
     <div class="container">
-        <div class="row">
+        <div class="row pt-2 mt-5">
             <div class="col-md-6 mb-5 mb-md-0">
                 <div class="block">
                     <h2 class="subtitle wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">Laissez nous un message</h2>
                     <div class="contact-form">
-                        <form onSubmit={handleSubmit} id="contact-form" className='d-flex flex-column gap-4' method="#" action="#" role="form">
+                        <form ref={form} onSubmit={sendEmail} id="contact-form" className='d-flex flex-column gap-4' method="#" action="#" role="form">
                 
                             <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
-                                <input value={formData.nom} onChange={handleChange} type="text" placeholder="Nom" class="form-control" name="nom" id="nom" />
+                                <input type="text" placeholder="Nom" class="form-control" name="nom" id="nom" />
                             </div>
                             
                             <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".8s">
-                                <input value={formData.email} onChange={handleChange} type="email" placeholder="Email" class="form-control" name="email" id="email" />
+                                <input type="email" placeholder="Email" class="form-control" name="email" id="email" />
                             </div>
                             
                             <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
-                                <input value={formData.sujet} onChange={handleChange} type="text" placeholder="Sujet" class="form-control" name="sujet" id="sujet" />
+                                <input type="text" placeholder="Sujet" class="form-control" name="sujet" id="sujet" />
                             </div>
                             
                             <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.2s">
-                                <textarea value={formData.message} onChange={handleChange} rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>    
+                                <textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>    
                             </div>
                             
                             <div id="success" class="success">
@@ -138,7 +176,7 @@ export default function Contact() {
             </div>
         </div>
         <div class="col-12 col-md-6">
-            <form id="contact-form" className='container d-flex flex-column gap-4' method="#" action="#" role="form">
+            <form ref={form} onSubmit={sendEmailCandidature} id="contact-form" className='container d-flex flex-column gap-4' method="#" action="#" role="form">
                     
                     <div class="row form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
                         <div class="col-12 col-md-6">
@@ -156,17 +194,21 @@ export default function Contact() {
                         <input type="num" placeholder="Numéro téléphone" class="form-control" name="tel" id="tel" />
                     </div>
                     
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name="select" id="select" aria-label="Default select example">
                         <option selected>Comment avez vous entendu parler de l'entreprise?</option>
-                        <option value="1">Bouche à oreille</option>
-                        <option value="2">Internet</option>
-                        <option value="3">Entretient</option>
+                        <option value="Bouche à oreille">Bouche à oreille</option>
+                        <option value="Internet">Internet</option>
+                        <option value="Entretient">Entretient</option>
                     </select>
                     
                     <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.2s">
+                                <textarea placeholder="Parler nous de vous" class="form-control" name="message" id="message"></textarea>    
+                    </div>
+                        
+                    <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.2s">
                         <div class="upload-container">
                             Télécharger
-                            <input type="file" accept=".pdf" />
+                            <input type="file" name="file" accept=".pdf" />
                         </div>
                     </div>
                     

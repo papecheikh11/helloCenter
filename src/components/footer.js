@@ -3,14 +3,14 @@ import '../App.css';
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
-import { FaGooglePlusG } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
 
 export default function Footer() {
   return (
     <footer id="footer">
                 <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-4 d-flex align-items-center flex-column">
+                    <div class="col-4 d-flex align-items-center flex-column">
                     <h5>Hello Center</h5>
                     <h5>suivez-nous</h5>
                     <ul class="social">
@@ -30,20 +30,20 @@ export default function Footer() {
                             </a>
                         </li>
                         <li>
-                            <a href="https://hello-center-call-center.business.site/" class="Google Plus">
-                            <FaGooglePlusG />
+                            <a href="https://www.instagram.com/hellocenter29?igsh=MWZ5d281bXc1M2hoMw==" class="Google Plus">
+                            <FaInstagram />
                             </a>
                         </li>
                     </ul>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-4">
                     <h5>SERVICES</h5>
                         <p>Service Client</p>
                         <p>Télévente</p>
                         <p>Prise de rendez-vous</p>
                         <p>Sondage</p>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-4">
                     <h5>Contactez-Nous</h5>
                     <p>contact@hellocenter.net</p>
                     <p>+221.33.885.77.88</p>

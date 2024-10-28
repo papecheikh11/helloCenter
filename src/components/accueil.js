@@ -79,7 +79,7 @@ export default function Accueil() {
         <section id="works" class="works">
             <div class="container">
                 <div class="section-heading">
-                    <h1 class="title wow fadeInDown" data-wow-delay=".3s">Ils nous font confiance</h1>
+                    <h1 class="title wow fadeInDown" data-wow-delay=".3s">Ils nous ont fait confiance</h1>
                     <p class="wow fadeInDown" data-wow-delay=".5s">
                         Nos clients sont des professionnels qui sont généralement basés en Europe, en Amérique ou même dans le pays et peuvent être des opérateurs Téléphoniques, des entreprises commerciales, etc… et nous entretenons une relation de confiance avec eux et travaillons dans le long terme.
 

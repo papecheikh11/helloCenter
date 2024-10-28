@@ -167,11 +167,11 @@ export default function Contact() {
                 </div>
                 <div class="col-12 col-md-6 mt-1 text-center">
                     <TbBrandMyOppo class="iconeService" />
-                    <h6>Opportunités de Carrière</h6>
+                    <h6>Rénumération Attractive</h6>
                 </div>
                 <div class="col-12 col-md-6 mt-1 text-center">
                     <PiStudent class="iconeService" />
-                    <h6>Formation Continue</h6>
+                    <h6>Cadre Convivial</h6>
                 </div>
             </div>
         </div>

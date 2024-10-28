@@ -10,7 +10,7 @@ export default function Footer() {
     <footer id="footer">
                 <div class="container">
                 <div class="row">
-                    <div class="col-4 d-flex align-items-center flex-column">
+                    <div class="col-12 col-md-4 d-flex align-items-center flex-column">
                     <h5>Hello Center</h5>
                     <h5>suivez-nous</h5>
                     <ul class="social">
@@ -36,14 +36,14 @@ export default function Footer() {
                         </li>
                     </ul>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4">
                     <h5>SERVICES</h5>
                         <p>Service Client</p>
                         <p>Télévente</p>
                         <p>Prise de rendez-vous</p>
                         <p>Sondage</p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4">
                     <h5>Contactez-Nous</h5>
                     <p>contact@hellocenter.net</p>
                     <p>+221.33.885.77.88</p>

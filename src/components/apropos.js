@@ -222,7 +222,40 @@ export default function Apropos() {
             <div class="col-md-12">
                 <h2 class="subtitle text-center wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay=".3s">Nos Partenaires</h2>
             
-                <Partenaire />
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-4 col-sm-6">
+                        <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                            <div class="img-wrapper">
+                                <img src={require("../imagesHelloCenter/wekiki.png")} class="img-fluid" alt="this is a title"/>
+                            </div>
+                            <figcaption>
+                            <h4 class="text-center">
+                            <a href="https://www.wekiwi.fr/">
+                                WEKIWI
+                            </a>
+                            </h4>
+                        
+                            </figcaption>
+                        </figure>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6">
+                        <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="600ms">
+                            <div class="img-wrapper">
+                            <img src={require("../imagesHelloCenter/ma petite facture.jpg")} className="img-fluid" alt="this is a title" />
+                            
+                            </div>
+                            <figcaption>
+                            <h4 class="text-center">
+                            <a href="https://ma-petite-facture.fr/">
+                                Ma petite facture
+                            </a>
+                            </h4>
+                            
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
             </div>
         </div>
         </div>

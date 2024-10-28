@@ -10,40 +10,32 @@ export default function Footer() {
     <footer id="footer">
                 <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-4 d-flex align-items-center flex-column">
+                    <div class="col-6 col-md-4">
                     <h5>Hello Center</h5>
                     <h5>suivez-nous</h5>
-                    <ul class="social">
-                        <li>
+                    <div className="social gap-2">
                             <a href="https://www.facebook.com/profile.php?id=100078847297180" class="Facebook">
                             <FaFacebook />
                             </a>
-                        </li>
-                        <li>
                             <a href="https://twitter.com/HELLOCENTER3?t=dTFICd7F-U_Mes2u7aU08A&s=09" class="Twitter">
                             <FaTwitter />
                             </a>
-                        </li>
-                        <li>
                             <a href="https://www.linkedin.com/company/hellcenter/" class="Linkedin">
                             <FaLinkedinIn />
                             </a>
-                        </li>
-                        <li>
                             <a href="https://www.instagram.com/hellocenter29?igsh=MWZ5d281bXc1M2hoMw==" class="Google Plus">
                             <FaInstagram />
                             </a>
-                        </li>
-                    </ul>
                     </div>
-                    <div class="col-12 col-md-4">
+                    </div>
+                    <div class="col-6 col-md-4">
                     <h5>SERVICES</h5>
                         <p>Service Client</p>
                         <p>Télévente</p>
                         <p>Prise de rendez-vous</p>
                         <p>Sondage</p>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-6 col-md-4">
                     <h5>Contactez-Nous</h5>
                     <p>contact@hellocenter.net</p>
                     <p>+221.33.885.77.88</p>

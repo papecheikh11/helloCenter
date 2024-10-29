@@ -5,6 +5,9 @@ import Info from './Info'
 import { TbBrandMyOppo } from "react-icons/tb";
 import { PiStudent } from "react-icons/pi";
 import emailjs from 'emailjs-com';
+import { GiMoneyStack } from "react-icons/gi";
+import { GiWoodFrame } from "react-icons/gi";
+
 
 export default function Contact() {
     // const [formData, setFormData] = useState({
@@ -166,11 +169,11 @@ export default function Contact() {
                     <h6>Formation Continue</h6>
                 </div>
                 <div class="col-12 col-md-6 mt-1 text-center">
-                    <TbBrandMyOppo class="iconeService" />
+                <GiMoneyStack class="iconeService" />
                     <h6>Rénumération Attractive</h6>
                 </div>
                 <div class="col-12 col-md-6 mt-1 text-center">
-                    <PiStudent class="iconeService" />
+                    <GiWoodFrame class="iconeServic mb-4" />
                     <h6>Cadre Convivial</h6>
                 </div>
             </div>

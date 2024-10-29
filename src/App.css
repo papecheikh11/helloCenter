@@ -558,6 +558,11 @@ figure figcaption p {
   font-size: 100px;
 }
 
+.iconeServic{
+  color: #00AEDA;
+  font-size: 80px;
+}
+
 #feature {
   padding: 80px 0;
 }

@@ -104,7 +104,7 @@ export default function Accueil() {
                     </p>
                 </div>
                 <div class="row">
-                    <div class="col-6 text-center">
+                    <div class="col-12 col-md-6 text-center">
                         <div class="media wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
                             <div class="iconeService"><FaHeadset / ></div>
                             <div class="media-body">
@@ -115,7 +115,7 @@ export default function Accueil() {
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 text-center">
+                    <div class="col-12 col-md-6 text-center">
                         <div class="media wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="600ms">
                             <div class="iconeService"><MdCoPresent /></div>
                             <div class="media-body">
@@ -126,7 +126,7 @@ export default function Accueil() {
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 text-center">
+                    <div class="col-12 col-md-6 text-center">
                         <div class="media wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="900ms">
                             <div class="iconeService"><RiCustomerService2Fill/ ></div>
                             <div class="media-body">
@@ -137,7 +137,7 @@ export default function Accueil() {
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 text-center">
+                    <div class="col-12 col-md-6 text-center">
                         <div class="media wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="900ms">
                             <div class="iconeService"><RiSurveyLine / ></div>
                             <div class="media-body">

@@ -37,8 +37,8 @@ export default function Footer() {
                     </div>
                     <div class="col-6 col-md-4 order-2 order-md-3">
                     <h5>Contactez-Nous</h5>
-                    <p>contact@hellocenter.net</p>
-                    <p>+221.33.885.77.88</p>
+                    <p>contact@hellocenter.org</p>
+                    <p>+221.33.848.10.18</p>
                     </div>
                 </div>
 

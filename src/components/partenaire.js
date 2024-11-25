@@ -100,6 +100,23 @@ export default function Partenaire() {
                 </figcaption>
             </figure>
         </div>
+        <div class="col-md-4 col-sm-6">
+            <figure class="wow fadeInLeft animated" data-wow-duration="500ms" data-wow-delay="1200ms">
+                <div class="img-wrapper">
+                <img src={require("../imagesHelloCenter/diday.jpg")} className="img-fluid" alt="this is a title" />
+                    {/* <div class="overlay">
+                    </div> */}
+                </div>
+                <figcaption>
+                <h4 class="text-center">
+                <a href="https://diday.com/">
+                    Diday
+                </a>
+                </h4>
+                
+                </figcaption>
+            </figure>
+        </div>
     </div>
   )
 }

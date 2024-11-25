@@ -1,5 +1,7 @@
 
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import '../App.css';
 import Info from './Info'
 import { TbBrandMyOppo } from "react-icons/tb";
@@ -44,14 +46,19 @@ export default function Contact() {
     const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
-        emailjs.sendForm('service_26fdpl8', 'template_tgwix9p', form.current, 'W3q1bh_ZdO7lF3VBC')
-            .then((result) => { console.log(result.text); alert('Message envoyé avec succès !');
+        emailjs.sendForm('service_y8ngsze', 'template_bleykbc', form.current, 'oWXaiXY80CC2Hl1Nd')
+            .then((result) => { console.log(result.text); toast.success('Message envoyé avec succès !');
 
             },
-                (error) => { console.log(error.text); alert('Erreur lors de l\'envoi du message.');
+                (error) => { console.log(error.text); toast.error('Erreur lors de l\'envoi du message.');
             });
     }
 
+    const [selectedFile, setSelectedFile] = useState(null);
+
+    const handleFileChange = (e) => {
+        setSelectedFile(e.target.files[0]);
+    };
     
     const sendEmailCandidature = (e) => {
         e.preventDefault();
@@ -73,14 +80,16 @@ export default function Contact() {
             attachmentName: fileInput.name // Nom du fichier pour l'affichage
         };
     
-        emailjs.send('service_26fdpl8', 'template_5dkmzmf', emailData, 'W3q1bh_ZdO7lF3VBC')
+        emailjs.send('service_vh5dx98', 'template_m48eu5n', emailData, 'oWXaiXY80CC2Hl1Nd')
             .then((result) => {
                 console.log(result.text);
-                alert('Message envoyé avec succès !');
+                toast.success('Message envoyé avec succès !');
+                form.current.reset(); // Réinitialiser le formulaire après envoi
+                setSelectedFile(null);
             })
             .catch((error) => {
                 console.error('Une erreur est survenue : ', error);
-                alert('Erreur lors de l\'envoi du message : ' + error.text);
+                toast.success('Erreur lors de l\'envoi du message : ' + error.text);
             });
     };
     
@@ -107,7 +116,7 @@ export default function Contact() {
         <div class="row pt-2 mt-5">
             <div class="col-md-6 mb-5 mb-md-0">
                 <div class="block">
-                    <h2 class="subtitle wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">Laissez nous un message</h2>
+                    <h2 class="subtitle wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">Parténariat</h2>
                     <div class="contact-form">
                         <form ref={form} onSubmit={sendEmail} id="contact-form" className='d-flex flex-column gap-4' method="#" action="#" role="form">
                 
@@ -137,7 +146,8 @@ export default function Contact() {
                             
                             <div id="submit" class="wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.4s">
                                 <button type="submit" id="contact-submit" class="btn btn-default btn-send hvr-bounce-to-right" value="Send Message">Envoyer</button>
-                            </div>                      
+                            </div>  
+                            <ToastContainer />                     
                         </form>
                     </div>
                 </div>
@@ -179,6 +189,7 @@ export default function Contact() {
             </div>
         </div>
         <div class="col-12 col-md-6">
+        <h2 class="subtitle wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".3s">Nous Rejoindre</h2>
             <form ref={form} onSubmit={sendEmailCandidature} id="contact-form" className='container d-flex flex-column gap-4' method="#" action="#" role="form">
                     
                     <div class="row form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
@@ -211,8 +222,14 @@ export default function Contact() {
                     <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.2s">
                         <div class="upload-container">
                             Télécharger
-                            <input type="file" name="file" accept=".pdf" />
+                            <input type="file" name="file" accept=".pdf" onChange={handleFileChange} />
                         </div>
+
+                {selectedFile && (
+                    <div className="file-preview mt-2">
+                        <strong>Fichier sélectionné :</strong> {selectedFile.name}
+                    </div>
+                )}
                     </div>
                     
                     <div id="success" class="success">
@@ -225,7 +242,8 @@ export default function Contact() {
                     
                     <div id="submit" class="wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.4s">
                         <button type="submit" id="contact-send" class="btn btn-default btn-send hvr-bounce-to-right" value="Send Message">Envoyer</button>
-                    </div>                      
+                    </div> 
+                    <ToastContainer />                     
                 </form>
         </div>
         </div>
